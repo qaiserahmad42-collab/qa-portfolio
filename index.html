@@ -384,18 +384,18 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
     <li><a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});return false">Über mich</a></li>
     <li><a href="#kontakt" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'});return false" class="nav-cta">Kostenlose Beratung</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menü">
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menü">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="/leistungen/" onclick="closeMobileMenu()">Leistungen</a>
-  <a href="/portfolio/" onclick="closeMobileMenu()">Portfolio</a>
-  <a href="/#tools" onclick="closeMobileMenu()">Expertise</a>
-  <a href="/#about" onclick="closeMobileMenu()">Über mich</a>
-  <a href="/#kontakt" onclick="closeMobileMenu()" class="m-cta">Kostenlose Beratung</a>
+  <a href="/leistungen/" onclick="closeMenu()">Leistungen</a>
+  <a href="/portfolio/" onclick="closeMenu()">Portfolio</a>
+  <a href="/#tools" onclick="closeMenu()">Expertise</a>
+  <a href="/#about" onclick="closeMenu()">Über mich</a>
+  <a href="/#kontakt" onclick="closeMenu()" class="m-cta">Kostenlose Beratung</a>
 </div>
 
 <!-- ===== MAIN ===== -->
@@ -594,20 +594,22 @@ function goto(id) {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }, 60);
 }
-function toggleMobileMenu() {
+function toggleMenu() {
   const menu = document.getElementById('mobile-menu');
   const btn = document.getElementById('hamburger');
   menu.classList.toggle('open');
   btn.classList.toggle('open');
   document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
 }
-function closeMobileMenu() {
+function closeMenu() {
   const menu = document.getElementById('mobile-menu');
   const btn = document.getElementById('hamburger');
   if (menu) menu.classList.remove('open');
   if (btn) btn.classList.remove('open');
   document.body.style.overflow = '';
 }
+function toggleMobileMenu() { toggleMenu(); }
+function closeMobileMenu() { closeMenu(); }
 window.addEventListener('resize', () => {
   if (window.innerWidth > 1060) closeMobileMenu();
 });
