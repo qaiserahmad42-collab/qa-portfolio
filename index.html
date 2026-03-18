@@ -121,7 +121,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;ali
   position:fixed;top:68px;left:0;right:0;bottom:0;
   background:rgba(248,250,249,.98);
   backdrop-filter:blur(20px);
-  z-index:199;
+  z-index:9998;
   flex-direction:column;
   align-items:center;
   justify-content:center;
@@ -321,9 +321,9 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
 
 /* RESPONSIVE */
 @media(max-width:1060px){.branchen-grid{grid-template-columns:1fr!important}.branchen-grid>*{min-width:0;width:100%}
-  nav{padding:0 1.5rem}
+  nav{padding:0 1.5rem;z-index:9999}
   .nav-links{display:none}
-  .hamburger{display:flex}
+  .hamburger{display:flex;z-index:9999;position:relative}
   section{padding:5rem 1.5rem}
   .hero{padding:130px 1.5rem 4rem}
   .strip{padding:1.2rem 1.5rem}
@@ -384,7 +384,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
     <li><a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});return false">Über mich</a></li>
     <li><a href="#kontakt" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'});return false" class="nav-cta">Kostenlose Beratung</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menü">
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menü" style="position:relative;z-index:300;-webkit-tap-highlight-color:transparent;touch-action:manipulation">
     <span></span><span></span><span></span>
   </button>
 </nav>
