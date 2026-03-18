@@ -650,7 +650,7 @@ if (form) {
         status.textContent = '\u2713 Nachricht gesendet!';
         form.reset(); btn.textContent = 'Gesendet \u2713';
       } else { throw new Error(); }
-    }    } catch(err) {
+    } catch(err) {
       status.className = 'error';
       status.textContent = 'Fehler beim Senden. Bitte versuchen Sie es erneut.';
       btn.textContent = 'Nachricht senden';
