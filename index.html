@@ -189,6 +189,7 @@ section{padding:7rem 5%}
 .svc-icon{font-size:1.6rem;margin-bottom:.8rem;display:block}
 .svc-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--d1);margin-bottom:.5rem}
 .svc-teaser{font-size:.84rem;color:var(--muted);line-height:1.7;margin-bottom:1rem}
+.svc-meta{font-size:.72rem;color:var(--muted);letter-spacing:.04em;margin:.6rem 0 .4rem}
 .svc-more{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--o1);font-weight:500;display:flex;align-items:center;gap:.4rem;transition:gap .2s}
 .svc:hover .svc-more{gap:.7rem}
 
@@ -436,19 +437,47 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
   <section id="leistungen">
     <div class="inner">
       <div class="reveal">
-        <p class="sec-label">Was ich anbiete</p>
-        <h2 class="sec-title">Meine Leistungen</h2>
-        <p class="sec-sub">Klicken Sie auf eine Leistung für mehr Details.</p>
+        <p class="sec-label">Services &amp; Pakete</p>
+        <h2 class="sec-title">Was wir für Sie tun</h2>
+        <p class="sec-sub">Vier konkrete Pakete mit klarem Umfang, Laufzeit und Fixpreis — kein Stundensatz-Risiko.</p>
         <div class="rule"></div>
       </div>
       <div class="svc-grid reveal">
-        <div class="svc" onclick="window.location='/leistungen/testmanagement-on-demand/'"><div class="svc-num">01</div><span class="svc-icon">🗂</span><h3 class="svc-title">Testmanagement & Strategie</h3><p class="svc-teaser">Strukturierte Testprozesse vom Konzept bis zur Abnahme – risikobasiert, ISTQB-konform, inkl. UAT & Abnahmetests.</p><div class="svc-more">Mehr erfahren <span>→</span></div></div>
-        <div class="svc" onclick="window.location='/leistungen/testautomatisierung/'"><div class="svc-num">02</div><span class="svc-icon">⚡</span><h3 class="svc-title">Testautomatisierung</h3><p class="svc-teaser">End-to-End-Automatisierung für Web, Mobile und API mit nahtloser CI/CD-Integration.</p><div class="svc-more">Mehr erfahren <span>→</span></div></div>
-        <div class="svc" onclick="window.location='/leistungen/tool-rollout/'"><div class="svc-num">03</div><span class="svc-icon">🛠</span><h3 class="svc-title">Tool-Einführung & Rollout</h3><p class="svc-teaser">Von der Evaluierung bis zum unternehmensweiten Rollout – nachhaltig verankert.</p><div class="svc-more">Mehr erfahren <span>→</span></div></div>
-        <div class="svc" onclick="window.location='/leistungen/defect-management/'"><div class="svc-num">04</div><span class="svc-icon">🎯</span><h3 class="svc-title">Defect Management</h3><p class="svc-teaser">Einheitliche Fehlerbehandlung mit klaren Prozessen, Templates und Dashboards.</p><div class="svc-more">Mehr erfahren <span>→</span></div></div>
-        <div class="svc" onclick="window.location='/leistungen/training/'"><div class="svc-num">05</div><span class="svc-icon">🎓</span><h3 class="svc-title">Training & Enablement</h3><p class="svc-teaser">Praxisnahe Schulungen für Teams – mit Dokumentation, die dauerhaft nützt.</p><div class="svc-more">Mehr erfahren <span>→</span></div></div>
-
-        <div class="svc" onclick="window.location='/leistungen/ki-qa/'"><div class="svc-num">06</div><span class="svc-icon">🤖</span><h3 class="svc-title">KI-gestützte QA & Testing</h3><p class="svc-teaser">Zephyr MCP, KI-Testfallgenerierung, automatische Reports &amp; Teststrategien – Tester sparen bis zu 70% manuelle Arbeit.</p><div class="svc-more">Mehr erfahren <span>→</span></div></div>
+        <div class="svc" onclick="window.location='/leistungen/infrastruktur/'">
+          <div class="svc-num">01</div>
+          <span class="svc-icon">🏗</span>
+          <h3 class="svc-title">Testinfrastruktur &amp; Strategie</h3>
+          <p class="svc-teaser">Tool-Auswahl, Zephyr Scale Einrichtung, Teststrategie &amp; Testkonzept — alles aus einer Hand.</p>
+          <div class="svc-meta">⏱ 4–6 Wochen &nbsp;·&nbsp; Fixpreis</div>
+          <div class="svc-more">Paket entdecken <span>→</span></div>
+        </div>
+        <div class="svc" onclick="window.location='/leistungen/ki-testmanagement/'">
+          <div class="svc-num">02</div>
+          <span class="svc-icon">🤖</span>
+          <h3 class="svc-title">KI-gestütztes Testmanagement</h3>
+          <p class="svc-teaser">Zephyr MCP, KI-Testfallgenerierung, automatische Reports &amp; Quality Gate — bis zu 70% weniger manuelle Arbeit.</p>
+          <div class="svc-meta">⏱ 2–3 Wochen &nbsp;·&nbsp; Fixpreis</div>
+          <div class="svc-more">Paket entdecken <span>→</span></div>
+        </div>
+        <div class="svc" onclick="window.location='/leistungen/workshops-schulungen/'">
+          <div class="svc-num">03</div>
+          <span class="svc-icon">🎓</span>
+          <h3 class="svc-title">Workshops &amp; Schulungen</h3>
+          <p class="svc-teaser">Zephyr Scale, Testdesign nach ISTQB, Testing für Entwickler — praxisnah &amp; sofort anwendbar.</p>
+          <div class="svc-meta">⏱ 1–2 Tage &nbsp;·&nbsp; Fixpreis</div>
+          <div class="svc-more">Paket entdecken <span>→</span></div>
+        </div>
+        <div class="svc" onclick="window.location='/leistungen/testmanagement-on-demand/'">
+          <div class="svc-num">04</div>
+          <span class="svc-icon">📋</span>
+          <h3 class="svc-title">Testmanagement on Demand</h3>
+          <p class="svc-teaser">Externer Testmanager mit voller Projektverantwortung — UAT, Quality Gate, Reporting, flexibel skalierbar.</p>
+          <div class="svc-meta">⏱ Flexibel &nbsp;·&nbsp; Fixpreis/Monat</div>
+          <div class="svc-more">Paket entdecken <span>→</span></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem">
+        <a href="/leistungen/" class="btn btn-secondary">Alle Services &amp; Pakete ansehen</a>
       </div>
     </div>
   </section>
