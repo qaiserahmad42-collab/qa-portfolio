@@ -409,7 +409,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
         <div class="avail"><div class="avail-dot"></div>Verfügbar für neue Mandate</div>
         <p class="hero-kicker">Testmanagement & Testautomatisierung · Frankfurt & Remote</p>
         <h1 class="hero-title">Testmanagement<br>& Automatisierung<br><em>aus einer Hand.</em></h1>
-        <p class="hero-desc">Wir helfen Unternehmen im <strong>Finanzdienstleistungs- und IT-Bereich</strong>, Softwarequalität systematisch zu verbessern – mit ISTQB-konformen Prozessen, modernen Tools und KI-gestützter Testautomatisierung.</p>
+        <p class="hero-desc">Wir helfen Unternehmen im <strong>Finanzdienstleistungs- und IT-Bereich</strong>, Softwarequalität systematisch zu verbessern – mit unternehmensweiten Testing-Standards, ISTQB-konformen Prozessen und KI-gestützter Testautomatisierung.</p>
         <div class="hero-btns">
           <a href="#kontakt" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'});return false" class="btn btn-primary">Jetzt anfragen</a>
           <a href="#portfolio" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});return false" class="btn btn-secondary">Portfolio ansehen</a>
@@ -433,7 +433,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
     <span class="strip-lbl">Expertise in</span>
     <span class="tag">Zephyr Scale</span><span class="tag">Tosca</span>
     <span class="tag">Playwright</span><span class="tag">Jira Cloud</span><span class="tag">Confluence</span>
-    <span class="tag">Jenkins</span><span class="tag">GitHub CI/CD</span><span class="tag">qTest</span><span class="tag">ISTQB</span><span class="tag">KI-gestütztes Testing</span><span class="tag">UAT</span>
+    <span class="tag">Jenkins</span><span class="tag">GitHub CI/CD</span><span class="tag">qTest</span><span class="tag">ISTQB</span><span class="tag">KI-gestütztes Testing</span><span class="tag">UAT</span><span class="tag">Checkly</span><span class="tag">GitHub Actions</span><span class="tag">REST-Assured</span>
   </div>
 
   <section id="leistungen">
@@ -532,7 +532,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
           <p class="sec-label">Über mich</p>
           <h2 class="sec-title">Qaiser Ahmad</h2>
           <div class="rule"></div>
-          <p class="about-intro">Mit über 7 Jahren Enterprise-Erfahrung – davon 6 Jahre im regulierten Finanzdienstleistungsumfeld – helfen wir Unternehmen, Softwarequalität systematisch aufzubauen. Unser Fokus: Prozesse, Tools und Standards, die auch in anspruchsvollen Umgebungen langfristig tragen.</p>
+          <p class="about-intro">Mit über 7 Jahren Enterprise-Erfahrung – davon 6 Jahre bei einem der größten deutschen Finanzdienstleister – haben wir nicht nur Projekte betreut, sondern unternehmensweite Testing-Standards, Testrichtlinien und den Testmanager-Leitfaden für über 30 Teams mitentwickelt.</p>
           <div class="about-pts">
             <div class="apt"><span class="apt-icon">🚀</span><div><div class="apt-t">Sofort einsetzbar</div><div class="apt-d">Schnelle, greifbare Ergebnisse – kein langes Onboarding.</div></div></div>
             <div class="apt"><span class="apt-icon">🔗</span><div><div class="apt-t">Brücke zwischen Technik und Fachbereich</div><div class="apt-d">Klare Kommunikation von Entwicklern bis zum Management.</div></div></div>
@@ -552,7 +552,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
         <p class="sec-sub">Schreiben Sie mir direkt – ich melde mich innerhalb von 24 Stunden zurück.</p>
         <div class="cc-grid" style="margin-bottom:2rem">
           <div class="cc"><span class="cc-icon">📍</span><div><div class="cc-lbl">Standort</div><div class="cc-val">Dreieich / Frankfurt am Main</div></div></div>
-          <div class="cc"><span class="cc-icon">✉️</span><div><div class="cc-lbl">E-Mail</div><div class="cc-val">qaiserahmad@outlook.com</div></div></div>
+          <div class="cc"><span class="cc-icon">✉️</span><div><div class="cc-lbl">E-Mail</div><div class="cc-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4031212933253221282d2124002f35342c2f2f2b6e232f2d">[email&#160;protected]</a></div></div></div>
         </div>
         <form id="contact-form" action="https://formspree.io/f/xyknbkye" method="POST">
           <div class="form-row">
@@ -589,7 +589,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
     </div>
   </footer>
 </div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function goto(id) {
   setTimeout(() => {
     const el = document.getElementById(id);
@@ -650,13 +650,4 @@ if (form) {
         status.textContent = '\u2713 Nachricht gesendet!';
         form.reset(); btn.textContent = 'Gesendet \u2713';
       } else { throw new Error(); }
-    } catch {
-      status.className = 'error';
-      status.textContent = '\u2717 Fehler. Bitte schreiben: qaiserahmad@outlook.com';
-      btn.textContent = 'Nachricht senden'; btn.disabled = false;
     }
-  });
-}
-</script>
-</body>
-</html>

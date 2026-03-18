@@ -147,15 +147,23 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
   <div class="inner" style="max-width:800px">
     <div class="detail-section reveal">
       <h3>Was wir liefern</h3>
-      <ul><li>Aufbau von Automatisierungsprojekten mit Tosca, Playwright oder Appium</li><li>Integration in CI/CD-Pipelines (Jenkins, GitHub Actions)</li><li>Einrichtung von Testinfrastruktur auf Azure VMs</li><li>Strukturierung von Testfällen und Execution Lists</li><li>Anbindung an Testmanagement-Systeme</li><li>Schulung Ihres Teams</li></ul>
+      <ul>
+        <li><strong>Shift-left Testing:</strong> Automatisierung startet frühzeitig in der Entwicklung, nicht erst vor dem Release</li>
+        <li><strong>Testpyramide:</strong> Unit-Tests (≥80% Coverage) → API-Tests → Contract-Tests → E2E-Tests — jede Stufe mit klarem Zweck</li>
+        <li><strong>Contract-Tests:</strong> Absicherung von Microservice-Schnittstellen, Consumer-driven Contracts in der CI/CD-Pipeline</li>
+        <li><strong>E2E-Automatisierung mit Playwright:</strong> Fokus auf geschäftskritische Kernprozesse, Integration in GitHub Actions</li>
+        <li><strong>Smoke-Tests nach Deployment:</strong> Automatische Grundfunktionsprüfung nach jedem Release in Abnahme- und Produktivumgebung</li>
+        <li>Aufbau mit Tosca, Playwright oder Appium je nach Projektkontext</li>
+        <li>Schulung Ihres Teams bis zur selbstständigen Wartung</li>
+      </ul>
     </div>
     <div class="detail-section reveal">
       <h3>Unser Vorgehen</h3>
-      <p>Nicht alles muss automatisiert werden. Wir analysieren, welche Tests den größten Nutzen bringen, und bauen die Lösung so auf, dass Ihr Team sie langfristig selbst warten kann.</p>
+      <p>Nicht alles muss automatisiert werden — manuelle explorative Tests bleiben wichtig für Edge Cases und Usability. Wir bauen die Automatisierung so auf, dass sie wirtschaftlich vertretbar ist und Ihr Team sie langfristig selbst warten kann. Tests müssen reproduzierbar, deterministisch und unabhängig voneinander ausführbar sein.</p>
     </div>
     <div class="detail-section reveal">
       <h3>Tools & Methoden</h3>
-      <div class="chips"><span class="chip">Tosca (Client/Server/DEX)</span><span class="chip">Playwright</span><span class="chip">Appium</span><span class="chip">Jenkins</span><span class="chip">GitHub Actions</span><span class="chip">Azure VMs</span></div>
+      <div class="chips"><span class="chip">Tosca (Client/Server/DEX)</span><span class="chip">Playwright</span><span class="chip">Appium</span><span class="chip">Jenkins</span><span class="chip">REST-Assured</span><span class="chip">JUnit</span><span class="chip">GitHub Actions</span><span class="chip">Azure VMs</span></div>
     </div>
     <div style="margin-top:2rem">
       <a href="/#kontakt" class="btn btn-primary" style="margin-right:1rem">Jetzt anfragen</a>
