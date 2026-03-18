@@ -189,6 +189,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
 </footer>
 
 <script>
+function closeMenu(){const m=document.getElementById('mobile-menu');const b=document.getElementById('hamburger');if(m)m.classList.remove('open');if(b)b.classList.remove('open');document.body.style.overflow='';}
 function toggleMenu(){const m=document.getElementById('mobile-menu');const b=document.getElementById('hamburger');m.classList.toggle('open');b.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
 const io=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){e.target.style.transitionDelay=(i*.08)+'s';e.target.classList.add('vis');io.unobserve(e.target);}}); },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
