@@ -200,6 +200,7 @@ section{padding:7rem 5%}
 /* SERVICES */
 #leistungen{background:var(--white)}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.branchen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
 .svc{padding:2rem;border-radius:8px;border:1px solid var(--border);background:var(--bg);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s;cursor:pointer}
 .svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--o1),var(--o2));transform:scaleX(0);transform-origin:left;transition:transform .35s}
 .svc:hover::before{transform:scaleX(1)}
@@ -321,7 +322,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
 .dr .small{font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:.3rem}
 
 /* RESPONSIVE */
-@media(max-width:1060px){.branchen-grid{grid-template-columns:1fr!important}
+@media(max-width:1060px){.branchen-grid{grid-template-columns:1fr!important}.branchen-grid>*{min-width:0;width:100%}
   nav{padding:0 1.5rem}
   .nav-links{display:none}
   .hamburger{display:flex}
@@ -481,15 +482,15 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
   </div>
 
   <!-- BRANCHEN -->
-  <section id="branchen" style="background:var(--white);padding:5rem 5%">
+  <section id="branchen" style="background:var(--white);padding:5rem 5%;overflow:hidden">
     <div class="inner">
       <div class="reveal">
         <p class="sec-label">Branchenschwerpunkt</p>
-        <h2 class="sec-title">QA im Finanzdienstleistungsbereich</h2>
+        <h2 class="sec-title">QA im Finanzbereich</h2>
         <p class="sec-sub">Regulierte Umgebungen stellen besondere Anforderungen an Qualitätssicherung. Wir kennen sie aus der Praxis.</p>
         <div class="rule"></div>
       </div>
-      <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem" class="branchen-grid">
+      <div class="reveal" style=class="branchen-grid">
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.8rem">
           <div style="font-size:1.4rem;margin-bottom:.8rem">🏦</div>
           <h3 style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--d1);margin-bottom:.5rem">Banken & Versicherungen</h3>
