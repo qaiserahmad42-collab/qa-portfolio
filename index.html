@@ -321,7 +321,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
 .dr .small{font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:.3rem}
 
 /* RESPONSIVE */
-@media(max-width:1060px){
+@media(max-width:1060px){.branchen-grid{grid-template-columns:1fr!important}
   nav{padding:0 1.5rem}
   .nav-links{display:none}
   .hamburger{display:flex}
@@ -489,7 +489,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
         <p class="sec-sub">Regulierte Umgebungen stellen besondere Anforderungen an Qualitätssicherung. Wir kennen sie aus der Praxis.</p>
         <div class="rule"></div>
       </div>
-      <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.4rem">
+      <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem" class="branchen-grid">
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.8rem">
           <div style="font-size:1.4rem;margin-bottom:.8rem">🏦</div>
           <h3 style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--d1);margin-bottom:.5rem">Banken & Versicherungen</h3>
