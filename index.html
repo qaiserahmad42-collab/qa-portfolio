@@ -109,19 +109,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;ali
 .nav-cta:hover{background:var(--d1)!important}
 
 /* HAMBURGER */
-
-
-
-
-
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.75rem;border:none;background:none;z-index:300;position:relative}
+.hamburger span{display:block;width:24px;height:2px;background:var(--d1);border-radius:2px;transition:all .3s ease;pointer-events:none}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* MOBILE MENU */
-
-
-
-
-
-
+.mobile-menu{
+  display:none;
+  position:fixed;top:68px;left:0;right:0;bottom:0;
+  background:rgba(248,250,249,.98);
+  backdrop-filter:blur(20px);
+  z-index:9998;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  transition:opacity .3s ease;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  font-size:1.3rem;font-weight:500;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--d1);text-decoration:none;
+  padding:1.2rem 2rem;width:100%;text-align:center;
+  border-bottom:1px solid var(--border);
+  transition:color .2s,background .2s;
+}
+.mobile-menu a:hover{color:var(--d2);background:var(--d-bg)}
+.mobile-menu a:first-child{border-top:1px solid var(--border)}
+.mobile-menu .m-cta{background:var(--d2);color:#fff!important;margin:1.5rem 2rem;border-radius:6px;border:none!important;width:calc(100% - 4rem)}
 .mobile-menu .m-cta:hover{background:var(--d1)!important}
 
 /* PAGES */
@@ -305,7 +323,7 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
 @media(max-width:1060px){.branchen-grid{grid-template-columns:1fr!important}.branchen-grid>*{min-width:0;width:100%}
   nav{padding:0 1.5rem;z-index:9999}
   .nav-links{display:none}
-  
+  .hamburger{display:flex;z-index:9999;position:relative}
   section{padding:5rem 1.5rem}
   .hero{padding:130px 1.5rem 4rem}
   .strip{padding:1.2rem 1.5rem}
@@ -351,17 +369,6 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
   .strip{padding:1rem}
   footer{padding:1.4rem 1rem}
 }
-
-/* ===== HAMBURGER MENU ===== */
-.hbg{display:none;flex-direction:column;justify-content:center;align-items:center;width:44px;height:44px;cursor:pointer;background:none;border:none;padding:0;z-index:9999;position:relative}
-.hbg-bar{display:block;width:24px;height:2px;background:#0d2e2a;border-radius:2px;transition:all .3s;margin:3px 0}
-.mob-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#f8faf9;z-index:9998;flex-direction:column;align-items:center;justify-content:center;gap:0}
-.mob-nav.open{display:flex}
-.mob-nav a{font-size:1.4rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#0d2e2a;text-decoration:none;padding:1.2rem 2rem;width:100%;text-align:center;border-bottom:1px solid #c8dedd}
-.mob-nav a:first-of-type{border-top:1px solid #c8dedd}
-.mob-nav a:hover{color:#1a5c54;background:rgba(26,92,84,.05)}
-.mob-nav .mob-cta{background:#1a5c54;color:#fff!important;margin:1.5rem 2rem;border-radius:6px;border:none!important;width:calc(100% - 4rem)}
-@media(max-width:1060px){.hbg{display:flex}}
 </style>
 </head>
 <body>
@@ -377,25 +384,19 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
     <li><a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});return false">Über mich</a></li>
     <li><a href="#kontakt" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'});return false" class="nav-cta">Kostenlose Beratung</a></li>
   </ul>
-  
-
-  <button class="hbg" id="hbg" onclick="openMob()" aria-label="Menü">
-    <span class="hbg-bar"></span>
-    <span class="hbg-bar"></span>
-    <span class="hbg-bar"></span>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menü" style="-webkit-tap-highlight-color:transparent;touch-action:manipulation">
+    <span></span><span></span><span></span>
   </button>
 </nav>
-<div class="mob-nav" id="mob-nav">
-  <button onclick="closeMob()" style="position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;font-size:1.8rem;cursor:pointer;color:#0d2e2a;padding:.5rem">✕</button>
-  <a href="/leistungen/" onclick="closeMob()">Leistungen</a>
-  <a href="/portfolio/" onclick="closeMob()">Portfolio</a>
-  <a href="/#tools" onclick="closeMob()">Expertise</a>
-  <a href="/#about" onclick="closeMob()">Über mich</a>
-  <a href="/#kontakt" onclick="closeMob()" class="mob-cta">Kostenlose Beratung</a>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#leistungen" onclick="closeMenu();goto('leistungen');return false">Leistungen</a>
+  <a href="#portfolio" onclick="closeMenu();goto('portfolio');return false">Portfolio</a>
+  <a href="#tools" onclick="closeMenu();goto('tools');return false">Expertise</a>
+  <a href="#about" onclick="closeMenu();goto('about');return false">Über mich</a>
+  <a href="#kontakt" onclick="closeMenu();goto('kontakt');return false" class="m-cta">Kostenlose Beratung</a>
 </div>
-
-<!-- MOBILE MENU (old) -->
-
 
 <!-- ===== MAIN ===== -->
 <div id="page-main" class="page active">
@@ -588,46 +589,84 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
 </div>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script>
-function openMob(){
-  document.getElementById('mob-nav').classList.add('open');
-  document.body.style.overflow='hidden';
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + pageId);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  initReveal();
 }
-function closeMob(){
-  document.getElementById('mob-nav').classList.remove('open');
-  document.body.style.overflow='';
+function goto(id) {
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }, 60);
 }
-window.addEventListener('resize',function(){
-  if(window.innerWidth>1060)closeMob();
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('hamburger');
+  if (!menu || !btn) return;
+  menu.classList.toggle('open');
+  btn.classList.toggle('open');
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('hamburger');
+  if (menu) menu.classList.remove('open');
+  if (btn) btn.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function toggleMobileMenu() { toggleMenu(); }
+function closeMobileMenu() { closeMenu(); }
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 1060) closeMobileMenu();
 });
-function goto(id){
-  setTimeout(function(){
-    var el=document.getElementById(id);
-    if(el)el.scrollIntoView({behavior:'smooth'});
-  },60);
-}
-var form=document.getElementById('contact-form');
-if(form){
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var btn=document.getElementById('submit-btn');
-    var status=document.getElementById('form-status');
-    btn.textContent='Wird gesendet...';
-    btn.disabled=true;
-    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
-    .then(function(res){
-      if(res.ok){
-        status.className='success';
-        status.textContent='✓ Nachricht gesendet!';
-        form.reset();
-        btn.textContent='Gesendet ✓';
-      }else{throw new Error();}
-    })
-    .catch(function(){
-      status.className='error';
-      status.textContent='Fehler. Bitte erneut versuchen.';
-      btn.textContent='Nachricht senden';
-      btn.disabled=false;
+function initReveal() {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e.target.style.transitionDelay = (i * 0.08) + 's';
+        e.target.classList.add('vis');
+        io.unobserve(e.target);
+      }
     });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal:not(.vis)').forEach(el => io.observe(el));
+  const cio = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('vis'), i * 100);
+        cio.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.05 });
+  document.querySelectorAll('.card:not(.vis)').forEach(el => cio.observe(el));
+}
+initReveal();
+const form = document.getElementById('contact-form');
+if (form) {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const status = document.getElementById('form-status');
+    btn.textContent = 'Wird gesendet...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+      if (res.ok) {
+        status.className = 'success';
+        status.textContent = '\u2713 Nachricht gesendet!';
+        form.reset(); btn.textContent = 'Gesendet \u2713';
+      } else { throw new Error(); }
+    } catch(err) {
+      status.className = 'error';
+      status.textContent = 'Fehler beim Senden. Bitte versuchen Sie es erneut.';
+      btn.textContent = 'Nachricht senden';
+      btn.disabled = false;
+    }
   });
 }
 </script>
