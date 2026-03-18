@@ -381,9 +381,9 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
   <ul class="nav-links">
     <li><a href="/leistungen/">Leistungen</a></li>
     <li><a href="/portfolio/">Portfolio</a></li>
-    <li><a href="#" onclick="showPage('main');goto('tools');return false">Expertise</a></li>
-    <li><a href="#" onclick="showPage('main');goto('about');return false">Über mich</a></li>
-    <li><a href="#" onclick="showPage('main');goto('kontakt');return false" class="nav-cta">Kontakt</a></li>
+    <li><a href="#tools" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'});return false">Expertise</a></li>
+    <li><a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});return false">Über mich</a></li>
+    <li><a href="#kontakt" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'});return false" class="nav-cta">Kontakt</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menü">
     <span></span><span></span><span></span>
