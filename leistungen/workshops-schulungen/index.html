@@ -100,7 +100,11 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
   .card-grid{grid-template-columns:1fr}
   .results-grid{grid-template-columns:1fr}
 }
-.detail-section ul li{padding:.6rem 0;border-bottom:1px solid rgba(200,222,221,.4);line-height:1.7}.detail-section ul li:last-child{border-bottom:none}</style>
+.detail-section ul li{padding:.6rem 0;border-bottom:1px solid rgba(200,222,221,.4);line-height:1.7}.detail-section ul li:last-child{border-bottom:none}.workshop-list li{padding:.7rem 0;border-bottom:1px solid rgba(200,222,221,.35);line-height:1.5}
+.workshop-list li:last-child{border-bottom:none}
+.workshop-list li strong{display:block;font-size:.95rem;font-weight:500;color:var(--d1);margin-bottom:.25rem}
+.workshop-list li span{font-size:.87rem;color:var(--muted);line-height:1.6}
+</style>
 </head>
 <body>
 <nav>
@@ -129,17 +133,37 @@ footer{background:var(--d1);padding:1.8rem 5%;display:flex;justify-content:space
     <div style="display:inline-block;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;padding:.25rem .8rem;background:rgba(245,160,0,.15);border:1px solid rgba(245,160,0,.32);color:var(--o2);border-radius:3px;margin-bottom:1.2rem">Paket 03</div>
     <h1 class="page-title">Workshops & Schulungen</h1>
     <p class="page-lead">Praxisnahe Trainings, die Ihr Team befähigen – vom Testdesign über Tool-Schulungen bis zum Testing für Entwickler.</p>
-    <div style="display:flex;gap:2rem;margin-top:1.2rem;flex-wrap:wrap">
-      <div style="font-size:.85rem;color:var(--d4)">⏱ Laufzeit: <strong style="color:var(--o2)">1–2 Tage pro Format</strong></div>
-      <div style="font-size:.85rem;color:var(--d4)">💶 <strong style="color:var(--o2)">Fixpreis pro Workshop · Preis auf Anfrage</strong></div>
-    </div>
+    
   </div>
 </div>
 <section>
   <div class="inner" style="max-width:800px">
     <div class="detail-section reveal">
       <h3>Was im Paket enthalten ist</h3>
-      <ul><li><span style="font-weight:500;color:var(--d1)">Zephyr Scale Intensiv-Workshop</span><br><span style="font-size:.88rem">Vom Setup bis zum Power-User – Testfallverwaltung, Testzyklen, Reporting, Jira-Integration, Best Practices</span></li><li><span style="font-weight:500;color:var(--d1)">Testdesign nach ISTQB</span><br><span style="font-size:.88rem">Äquivalenzklassen, Grenzwertanalyse, Entscheidungstabellen, zustandsbasiertes Testen mit praktischen Übungen</span></li><li><span style="font-weight:500;color:var(--d1)">Testing für Entwicklerteams</span><br><span style="font-size:.88rem">Testdenken in der Entwicklung verankern, gute Testfälle schreiben, Shift-left Prinzip</span></li><li><span style="font-weight:500;color:var(--d1)">Testmanagement-Grundlagen</span><br><span style="font-size:.88rem">5-Phasen-Testprozess, Rollen, Dokumentation für neue Tester und Quereinsteiger</span></li><li><span style="font-weight:500;color:var(--d1)">KI im Testing</span><br><span style="font-size:.88rem">KI-Tools im QA-Alltag einsetzen, Zephyr MCP, KI-Testfallgenerierung</span></li><li>Alle Formate mit Handout-Dokumentation und Confluence How-To-Guides</li><li>Als Inhouse-Training vor Ort in Frankfurt oder remote</li></ul>
+      <ul class="workshop-list">
+        <li>
+          <strong>Zephyr Scale Intensiv-Workshop</strong>
+          <span>Vom Setup bis zum Power-User – Testfallverwaltung, Testzyklen, Reporting, Jira-Integration, Best Practices</span>
+        </li>
+        <li>
+          <strong>Testdesign nach ISTQB</strong>
+          <span>Äquivalenzklassen, Grenzwertanalyse, Entscheidungstabellen, zustandsbasiertes Testen mit praktischen Übungen</span>
+        </li>
+        <li>
+          <strong>Testing für Entwicklerteams</strong>
+          <span>Testdenken in der Entwicklung verankern, gute Testfälle schreiben, Shift-left Prinzip</span>
+        </li>
+        <li>
+          <strong>Testmanagement-Grundlagen</strong>
+          <span>5-Phasen-Testprozess, Rollen, Dokumentation für neue Tester und Quereinsteiger</span>
+        </li>
+        <li>
+          <strong>KI im Testing</strong>
+          <span>KI-Tools im QA-Alltag einsetzen, Zephyr MCP, KI-Testfallgenerierung</span>
+        </li>
+        <li>Alle Formate mit Handout-Dokumentation und Confluence How-To-Guides</li>
+        <li>Als Inhouse-Training vor Ort in Frankfurt oder remote</li>
+      </ul>
     </div>
     <div class="detail-section reveal">
       <h3>Konkrete Lieferergebnisse</h3>
